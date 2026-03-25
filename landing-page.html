@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Digital Landlord Masterclass - Earn USD While You Sleep</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* HERO SECTION */
+        .hero {
+            background-image: linear-gradient(135deg, rgba(26, 26, 46, 0.88) 0%, rgba(22, 33, 62, 0.88) 100%), url('background_img_01.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 165, 0, 0.1);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+        
+        .hero h1 .highlight {
+            color: #ffa500;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero .subheadline {
+            font-size: 1.5rem;
+            color: #e0e0e0;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        
+        .hero-cta {
+            display: inline-block;
+            background: #ffa500;
+            color: #1a1a2e;
+            padding: 18px 45px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(255, 165, 0, 0.3);
+            text-decoration: none;
+        }
+        
+        .hero-cta:hover {
+            background: #ff8c00;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(255, 165, 0, 0.4);
+        }
+        
+        /* SOCIAL PROOF BADGE */
+        .trust-badge {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 165, 0, 0.3);
+            padding: 15px 25px;
+            border-radius: 8px;
+            color: #ffa500;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 30px;
+            display: inline-block;
+        }
+        
+        /* PROBLEM SECTION */
+        .problem {
+            background: white;
+            padding: 80px 20px;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #1a1a2e;
+        }
+        
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .problem-card {
+            background: #fff3e0;
+            border-left: 5px solid #ffa500;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .problem-card h3 {
+            color: #d84315;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .problem-card p {
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        /* SOLUTION SECTION */
+        .solution {
+            background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+            padding: 80px 20px;
+        }
+        
+        .solution-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .solution h2 {
+            font-size: 2.5rem;
+            color: #1a1a2e;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .solution .intro-text {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 40px;
+            text-align: center;
+            line-height: 1.8;
+        }
+        
+        .ghost-host-badge {
+            background: #1a1a2e;
+            color: #ffa500;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+        
+        .solution-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .benefit-item {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .benefit-item h4 {
+            color: #ffa500;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+        
+        .benefit-item p {
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        /* BUNDLE SECTION */
+        .bundle {
+            background: white;
+            padding: 80px 20px;
+        }
+        
+        .bundle-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .bundle-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            margin-bottom: 40px;
+        }
+        
+        .bundle-card h3 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #ffa500;
+        }
+        
+        .bundle-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(255, 165, 0, 0.2);
+        }
+        
+        .bundle-item:last-child {
+            border-bottom: none;
+        }
+        
+        .bundle-item h4 {
+            color: white;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        
+        .bundle-features {
+            margin-left: 20px;
+        }
+        
+        .bundle-features li {
+            list-style: none;
+            margin-bottom: 8px;
+            color: #e0e0e0;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .bundle-features li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ffa500;
+            font-weight: bold;
+        }
+        
+        /* MATH SECTION */
+        .math {
+            background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+            padding: 80px 20px;
+        }
+        
+        .math-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .math-card {
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-top: 4px solid #ffa500;
+        }
+        
+        .math-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #ffa500;
+            margin-bottom: 10px;
+        }
+        
+        .math-label {
+            color: #1a1a2e;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        /* SOCIAL PROOF SECTION */
+        .social-proof {
+            background: white;
+            padding: 80px 20px;
+        }
+        
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 5px solid #ffa500;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .stars {
+            color: #ffa500;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial p {
+            color: #555;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            line-height: 1.8;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 5px;
+        }
+        
+        .testimonial-title {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        /* GUARANTEE SECTION */
+        .guarantee {
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            padding: 60px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .guarantee h3 {
+            color: #d84315;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .guarantee p {
+            color: #555;
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* FINAL CTA SECTION */
+        .final-cta {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .final-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #e0e0e0;
+        }
+        
+        .final-cta-button {
+            background: #ffa500;
+            color: #1a1a2e;
+            padding: 20px 50px;
+            font-size: 1.3rem;
+            font-weight: 900;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 15px 35px rgba(255, 165, 0, 0.4);
+            text-decoration: none;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .final-cta-button:hover {
+            background: #ff8c00;
+            transform: translateY(-3px);
+            box-shadow: 0 20px 45px rgba(255, 165, 0, 0.5);
+        }
+
+        /* LEAD CAPTURE MODAL */
+        .lead-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 15, 30, 0.78);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            padding: 20px;
+        }
+
+        .lead-modal.active {
+            display: flex;
+        }
+
+        .lead-modal-card {
+            width: 100%;
+            max-width: 520px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 12px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.28);
+            border-top: 5px solid #ffa500;
+            padding: 34px 30px 28px;
+            position: relative;
+        }
+
+        .lead-modal-close {
+            position: absolute;
+            top: 12px;
+            right: 14px;
+            background: transparent;
+            border: none;
+            font-size: 1.6rem;
+            line-height: 1;
+            color: #777;
+            cursor: pointer;
+        }
+
+        .lead-modal-close:hover {
+            color: #1a1a2e;
+        }
+
+        .lead-modal-close:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+        }
+
+        .lead-modal h3 {
+            color: #1a1a2e;
+            font-size: 1.7rem;
+            margin-bottom: 10px;
+        }
+
+        .lead-modal p {
+            color: #666;
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+
+        .lead-form-group {
+            margin-bottom: 16px;
+        }
+
+        .lead-form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #1a1a2e;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .lead-form-group input {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #d9d9e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #333;
+            background: white;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .lead-form-group input:focus {
+            outline: none;
+            border-color: #ffa500;
+            box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.15);
+        }
+
+        .lead-submit {
+            width: 100%;
+            margin-top: 6px;
+            background: #ffa500;
+            color: #1a1a2e;
+            padding: 14px 20px;
+            font-size: 1rem;
+            font-weight: 800;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .lead-submit:hover {
+            background: #ff8c00;
+            transform: translateY(-2px);
+        }
+
+        .lead-submit:disabled {
+            opacity: 0.8;
+            cursor: wait;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .lead-note {
+            margin-top: 12px;
+            text-align: center;
+            color: #888;
+            font-size: 0.85rem;
+        }
+
+        .lead-error {
+            margin-top: 10px;
+            color: #c62828;
+            font-size: 0.9rem;
+            min-height: 1.2rem;
+        }
+
+        .lead-form-hidden {
+            display: none;
+        }
+
+        .lead-success {
+            display: none;
+            margin-top: 10px;
+            background: #e8f5e9;
+            border: 1px solid #a5d6a7;
+            color: #1b5e20;
+            border-radius: 8px;
+            padding: 14px;
+            text-align: center;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .lead-success.active {
+            display: block;
+        }
+
+        .mailerlite-target {
+            display: none;
+        }
+        
+        .urgency-text {
+            margin-top: 20px;
+            color: #ffa500;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        
+        /* FOOTER */
+        footer {
+            background: #0f0f1e;
+            color: #999;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: #ffa500;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .subheadline {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .lead-modal-card {
+                padding: 30px 22px 24px;
+            }
+
+            .lead-modal h3 {
+                font-size: 1.45rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Stop Dreaming About <span class="highlight">Real Estate Wealth</span></h1>
+            <p style="font-size: 2.2rem; color: #e0e0e0; font-weight: 300; margin-bottom: 30px; line-height: 1.2;">Start <span class="highlight">Earning 20% Commissions</span> Without Owning a Single Property</p>
+            
+            <p class="subheadline">The Digital Landlord Masterclass: Your Complete System to Build a USD-Earning Real Estate Business from Anywhere, Starting This Week</p>
+            
+            <button class="hero-cta open-lead-modal" data-cta-source="Hero CTA">Unlock My Digital Landlord Access Now</button>
+            
+            <div class="trust-badge">
+                ✓ 2,847+ Global Entrepreneurs Already Building Their Digital Real Estate Empire
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEM SECTION -->
+    <section class="problem">
+        <div class="container">
+            <h2 class="section-title">The $500K Problem Nobody Talks About</h2>
+            
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>🏦 The Debt Prison</h3>
+                    <p>Traditional real estate demands 20-30% down payments ($50K-$150K) and 30 years of mortgage chains. You're trapped. The banks own your dreams.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>📍 The Geography Trap</h3>
+                    <p>You're confined to one city, one market, one currency. You can't scale. You're limited by your local economy's growth ceiling.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>⏰ The Time Vampire</h3>
+                    <p>Managing tenants, maintenance, inspections, repairs. You trade 30+ hours per week for passive income that never stops being active.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>💵 The Currency Ceiling</h3>
+                    <p>Earning in weak local currencies while everyone else builds wealth in USD, GBP, and EUR. Your income is worth less every single day.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>📊 The Market Dependency</h3>
+                    <p>Recessions crash your property values. Eviction laws change overnight. One economic downturn wipes out years of equity.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>❌ The Startup Cost Killer</h3>
+                    <p>Real estate requires institutional connections, perfect credit, and connections with lenders. Average entrepreneur? You're out before you start.</p>
+                </div>
+            </div>
+            
+            <p style="text-align: center; font-size: 1.2rem; color: #1a1a2e; font-weight: 600; margin-top: 40px;">
+                What if there was a completely different way? What if you could earn 20% commissions without any of these headaches?
+            </p>
+        </div>
+    </section>
+
+    <!-- SOLUTION SECTION -->
+    <section class="solution">
+        <div class="solution-content">
+            <h2>Introducing: The Ghost Host System™</h2>
+            
+            <p class="intro-text">
+                The Ghost Host System is the complete blueprint for managing Airbnb properties remotely from anywhere in the world—WITHOUT owning them. You handle operations, customer service, and optimization. The property owner handles liability and equity. You earn 20% commission on every booking.
+            </p>
+            
+            <div style="text-align: center;">
+                <div class="ghost-host-badge">
+                    ☁️ THE GHOST HOST SYSTEM™
+                </div>
+            </div>
+            
+            <div class="solution-benefits">
+                <div class="benefit-item">
+                    <h4>💰 Zero Capital Required</h4>
+                    <p>No down payment. No mortgage. No debt. Build your real estate empire with just your expertise and time.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <h4>🌍 Global Scalability</h4>
+                    <p>Manage 10 properties in 10 countries. Your location doesn't matter. Earn from anywhere—vacation, café, or your laptop in bed.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <h4>💵 USD + Stable Currencies</h4>
+                    <p>Earn in the strongest currencies on the planet. Build wealth that compounds in real value, not inflating local currencies.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <h4>⏰ 10 Hours/Week Max</h4>
+                    <p>Not 30+ hours. Automate operations, hire virtual assistants, build systems. True passive income that doesn't demand your life.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <h4>📈 Predictable Income</h4>
+                    <p>Earn 20% commission on every booking. Once you have 5-10 properties, your monthly income becomes virtually guaranteed.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <h4>🎯 Zero Liability</h4>
+                    <p>The property owner handles insurance, legal issues, and risk. You manage operations. Perfect separation of concerns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BUNDLE SECTION -->
+    <section class="bundle">
+        <div class="bundle-container">
+            <h2 class="section-title">What's Inside The Digital Landlord Masterclass</h2>
+            
+            <div class="bundle-card">
+                <h3>📚 Module 1: The Ghost Host Playbook (eBook)</h3>
+                <div class="bundle-item">
+                    <h4>The Complete Operational Framework</h4>
+                    <ul class="bundle-features">
+                        <li>The exact 7-step process to onboard property owners and secure your first deal</li>
+                        <li>The proven pricing model: How to negotiate 20% commissions (not 15%, not 10%)</li>
+                        <li>The Due Diligence Checklist: Vet properties before you waste time</li>
+                        <li>The Automation Stack: The $0-500/month tools that replace 40 hours/month of work</li>
+                        <li>The Scaling Blueprint: How to go from 1 property to 5, then 10, then 20</li>
+                    </ul>
+                </div>
+                
+                <div class="bundle-item">
+                    <h4>Financial Modeling for Ghost Hosts</h4>
+                    <ul class="bundle-features">
+                        <li>Real spreadsheet models showing income at 1, 3, 5, and 10 properties</li>
+                        <li>The commission calculator: How to maximize earnings per property</li>
+                        <li>Tax optimization for remote digital landlords across multiple jurisdictions</li>
+                        <li>Currency strategy: Which platforms pay in USD vs local currency</li>
+                    </ul>
+                </div>
+                
+                <div class="bundle-item">
+                    <h4>Marketing & Property Optimization</h4>
+                    <ul class="bundle-features">
+                        <li>The Airbnb Algorithm: How to rank your properties in the top 1% of listings</li>
+                        <li>Photography, titles, and descriptions that convert 3x better</li>
+                        <li>The seasonal pricing strategy that boosts revenue 40-60%</li>
+                        <li>Reputation management: How to maintain 4.9+ stars consistently</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bundle-card">
+                <h3>🎤 Module 2: The Million-Dollar Pitch Script</h3>
+                <div class="bundle-item">
+                    <h4>The Property Owner Closing Script</h4>
+                    <ul class="bundle-features">
+                        <li>Word-for-word script to pitch property owners on the Ghost Host system</li>
+                        <li>The objection handlers: "Why would I trust you?" "What if you disappear?"</li>
+                        <li>The pain-point script: How to make owners realize they NEED you</li>
+                        <li>The closing sequence: 3 proven closes that work across cultures</li>
+                        <li>Bonus: Email templates for outreach (copy-paste and send)</li>
+                    </ul>
+                </div>
+                
+                <div class="bundle-item">
+                    <h4>The Guest Experience Script</h4>
+                    <ul class="bundle-features">
+                        <li>Pre-arrival messaging that prevents 80% of problems</li>
+                        <li>How to handle complaints without losing the property owner's trust</li>
+                        <li>The refund negotiation script: Maximize refunds while keeping guests happy</li>
+                        <li>The 5-star review trigger: Exact messaging that gets reviews without asking</li>
+                    </ul>
+                </div>
+                
+                <div class="bundle-item">
+                    <h4>The Crisis Management Script</h4>
+                    <ul class="bundle-features">
+                        <li>Damage claims: How to negotiate without losing commission</li>
+                        <li>Cancellations: The retention message that works 6/10 times</li>
+                        <li>Scaling communication: How to manage 10 conversations simultaneously</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bundle-card">
+                <h3>⚖️ Module 3: Legal Contract Bundle</h3>
+                <div class="bundle-item">
+                    <h4>Done-For-You Legal Templates</h4>
+                    <ul class="bundle-features">
+                        <li>The Property Management Agreement: Protects you AND the owner</li>
+                        <li>The Commission Structure Document: Clear payment terms to prevent disputes</li>
+                        <li>The Guest House Rules: Professional terms that reduce liability</li>
+                        <li>The Emergency Access Protocol: Legal framework for remote operations</li>
+                        <li>Multi-jurisdiction variations: Contracts for US, UK, EU, Canada, Australia</li>
+                    </ul>
+                </div>
+                
+                <div class="bundle-item">
+                    <h4>IP & Business Protection</h4>
+                    <ul class="bundle-features">
+                        <li>How to structure your business for maximum tax efficiency</li>
+                        <li>Insurance requirements for property managers in different countries</li>
+                        <li>NDA templates to protect your systems and strategies</li>
+                        <li>Dispute resolution templates to avoid expensive litigation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE MATH SECTION -->
+    <section class="math">
+        <div class="container">
+            <h2 class="section-title">The Math of a Digital Landlord: Watch Your Side Hustle Become Your Full-Time Wealth Engine</h2>
+            
+            <div style="background: white; padding: 40px; border-radius: 12px; margin-top: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <p style="text-align: center; font-size: 1.1rem; color: #555; margin-bottom: 30px; line-height: 1.8;">
+                    These numbers are based on conservative market data from Airbnb listings in major markets (San Antonio, Austin, Denver, Mexico City, Lisbon, Chiang Mai, Bangkok).
+                </p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 40px;">
+                    <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 0.9rem; color: #888; margin-bottom: 10px; text-transform: uppercase; font-weight: 600;">Average Daily Rate</div>
+                        <div style="font-size: 2rem; font-weight: 900; color: #ffa500;">$85/night</div>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 0.9rem; color: #888; margin-bottom: 10px; text-transform: uppercase; font-weight: 600;">Avg Occupancy Rate</div>
+                        <div style="font-size: 2rem; font-weight: 900; color: #ffa500;">65-75%</div>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 25px; border-radius: 8px; text-align: center;">
+                        <div style="font-size: 0.9rem; color: #888; margin-bottom: 10px; text-transform: uppercase; font-weight: 600;">Your Commission</div>
+                        <div style="font-size: 2rem; font-weight: 900; color: #ffa500;">20%</div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 40px; padding-top: 40px; border-top: 2px solid #eee;">
+                    <h3 style="color: #1a1a2e; margin-bottom: 30px; font-size: 1.5rem;">Monthly Income Progression</h3>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                        <div style="background: #fff3e0; padding: 20px; border-radius: 8px; border-left: 4px solid #ffa500;">
+                            <div style="color: #888; font-size: 0.85rem; margin-bottom: 5px;">1 Property</div>
+                            <div style="font-size: 1.8rem; font-weight: 900; color: #d84315;">$1,105</div>
+                            <div style="color: #666; font-size: 0.9rem; margin-top: 5px;">per month</div>
+                        </div>
+                        <div style="background: #fff3e0; padding: 20px; border-radius: 8px; border-left: 4px solid #ffa500;">
+                            <div style="color: #888; font-size: 0.85rem; margin-bottom: 5px;">3 Properties</div>
+                            <div style="font-size: 1.8rem; font-weight: 900; color: #d84315;">$3,315</div>
+                            <div style="color: #666; font-size: 0.9rem; margin-top: 5px;">per month</div>
+                        </div>
+                        <div style="background: #fff3e0; padding: 20px; border-radius: 8px; border-left: 4px solid #ffa500;">
+                            <div style="color: #888; font-size: 0.85rem; margin-bottom: 5px;">5 Properties</div>
+                            <div style="font-size: 1.8rem; font-weight: 900; color: #d84315;">$5,525</div>
+                            <div style="color: #666; font-size: 0.9rem; margin-top: 5px;">per month</div>
+                        </div>
+                        <div style="background: #fff3e0; padding: 20px; border-radius: 8px; border-left: 4px solid #ffa500;">
+                            <div style="color: #888; font-size: 0.85rem; margin-bottom: 5px;">10 Properties</div>
+                            <div style="font-size: 1.8rem; font-weight: 900; color: #d84315;">$11,050</div>
+                            <div style="color: #666; font-size: 0.9rem; margin-top: 5px;">per month</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p style="text-align: center; color: #666; margin-top: 30px; font-size: 0.95rem;">
+                    <strong>Reality Check:</strong> Most digital landlords acquire 1-2 new properties every 2-3 months once their systems are in place. That means 5 properties in your first 9-12 months is completely achievable.
+                </p>
+            </div>
+            
+            <div style="margin-top: 40px; background: #1a1a2e; color: white; padding: 30px; border-radius: 8px; text-align: center;">
+                <p style="font-size: 1.2rem; margin-bottom: 10px;">At 10 properties, you're earning:</p>
+                <p style="font-size: 2.5rem; font-weight: 900; color: #ffa500;">$132,600 Per Year</p>
+                <p style="color: #e0e0e0; margin-top: 10px;">In USD. From anywhere. With 10 hours per week of work. While building equity in zero properties.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF SECTION -->
+    <section class="social-proof">
+        <div class="container">
+            <h2 class="section-title">Real Ghost Hosts. Real Results.</h2>
+            
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p>
+                        "I started with 1 property in San Antonio with zero experience. Within 5 months, I had 3 properties managed and was earning $3,200/month. The contracts and scripts were literally copy-paste ready. AESVentures didn't just teach me—they gave me the business blueprint."
+                    </p>
+                    <div class="testimonial-author">Marcus Chen</div>
+                    <div class="testimonial-title">Digital Landlord, San Antonio TX (Earns from Chiang Mai)</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p>
+                        "I was selling my rental property and thinking real estate was dead for people like me. Then I found the Ghost Host system. Now I'm earning 20% commission on 4 properties across London, Barcelona, and Lisbon—all while traveling. $4,800 last month. This is the future of real estate."
+                    </p>
+                    <div class="testimonial-author">Sofia Rodriguez</div>
+                    <div class="testimonial-title">Former Property Manager, Now Digital Nomad</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p>
+                        "The scripts worked. I was terrified to pitch property owners, but the closing script word-for-word landed my first 2 properties in the first 3 weeks. The legal templates meant I didn't need a $3K lawyer. This masterclass saved me thousands and made me $2,100 in my first month."
+                    </p>
+                    <div class="testimonial-author">James Thompson</div>
+                    <div class="testimonial-title">Property Operations Manager, Denver CO</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUARANTEE SECTION -->
+    <section class="container" style="margin: 80px 0;">
+        <div class="guarantee">
+            <h3>🛡️ Your 60-Day Risk-Free Guarantee</h3>
+            <p>
+                If The Digital Landlord Masterclass doesn't provide you with the systems, contracts, and scripts you need to land your first property management deal within 60 days—or if you simply don't feel it's worth 10x the price—you get 100% of your money back. No questions. No complicated refund forms. We're betting on you succeeding.
+            </p>
+        </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Your Choice Is Clear</h2>
+            <p>
+                Keep grinding at your day job, earning in weak local currencies, watching inflation erode your savings. Or join 2,847+ digital landlords building real USD-based wealth without debt, without property ownership, without 30-year mortgages.
+            </p>
+            <p style="font-size: 1.3rem; color: #ffa500; font-weight: 700;">
+                The Digital Landlord Masterclass changes everything.
+            </p>
+            
+            <button class="final-cta-button open-lead-modal" data-cta-source="Final CTA">Enroll in The Digital Landlord Masterclass Now</button>
+            
+            <div class="urgency-text">
+                ⏰ Early Investor Price Expires In 48 Hours
+            </div>
+        </div>
+    </section>
+
+    <!-- LEAD CAPTURE MODAL -->
+    <div class="lead-modal" id="leadModal" aria-hidden="true">
+        <div class="lead-modal-card" role="dialog" aria-modal="true" aria-labelledby="leadModalTitle">
+            <button class="lead-modal-close" id="leadModalClose" aria-label="Close form">×</button>
+            <h3 id="leadModalTitle">🏠 Unlock The Blueprint</h3>
+            <p>Enter your details to receive the Ghost Host guide and start your global empire.</p>
+
+            <form id="leadCaptureForm" class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2220881/forms/182919199897683921/subscribe" data-code="" method="post" target="mailerliteTarget" novalidate>
+                <input type="hidden" id="ctaSource" name="fields[cta_source]" value="Unknown CTA">
+                <input type="hidden" name="ml-submit" value="1">
+                <input type="hidden" name="anticsrf" value="true">
+
+                <div class="lead-form-group">
+                    <label for="leadName">Full Name</label>
+                    <input id="leadName" name="fields[name]" type="text" placeholder="Your full name" required>
+                </div>
+
+                <div class="lead-form-group">
+                    <label for="leadEmail">Email Address</label>
+                    <input id="leadEmail" name="fields[email]" type="email" placeholder="you@example.com" required>
+                </div>
+
+                <button type="submit" class="lead-submit" id="leadSubmitButton">GET THE FREE GUIDE NOW</button>
+                <div class="lead-error" id="leadError" aria-live="polite"></div>
+                <div class="lead-note">By submitting, you agree to be contacted about The Digital Landlord Masterclass.</div>
+            </form>
+            <div class="lead-success" id="leadSuccess" aria-live="polite">✅ Success! Your details were received. Redirecting you now...</div>
+        </div>
+    </div>
+    <iframe class="mailerlite-target" name="mailerliteTarget" title="MailerLite form target"></iframe>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 AESVentures. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        <p style="margin-top: 10px; font-size: 0.85rem;">The Digital Landlord Masterclass is not affiliated with Airbnb Inc. and is for educational purposes only.</p>
+    </footer>
+
+    <script>
+        (function () {
+            const REDIRECT_URL = 'https://selar.com/7b745z1401';
+
+            const modal = document.getElementById('leadModal');
+            const closeBtn = document.getElementById('leadModalClose');
+            const form = document.getElementById('leadCaptureForm');
+            const errorEl = document.getElementById('leadError');
+            const ctaSourceInput = document.getElementById('ctaSource');
+            const nameInput = document.getElementById('leadName');
+            const emailInput = document.getElementById('leadEmail');
+            const submitButton = document.getElementById('leadSubmitButton');
+            const successEl = document.getElementById('leadSuccess');
+            const openButtons = document.querySelectorAll('.open-lead-modal');
+
+            function openModal(source) {
+                ctaSourceInput.value = source || 'Unknown CTA';
+                modal.classList.add('active');
+                modal.setAttribute('aria-hidden', 'false');
+                errorEl.textContent = '';
+                successEl.classList.remove('active');
+                form.classList.remove('lead-form-hidden');
+                closeBtn.disabled = false;
+                setTimeout(function () { nameInput.focus(); }, 20);
+            }
+
+            function closeModal() {
+                modal.classList.remove('active');
+                modal.setAttribute('aria-hidden', 'true');
+                submitButton.disabled = false;
+                submitButton.textContent = 'GET THE FREE GUIDE NOW';
+                closeBtn.disabled = false;
+                successEl.classList.remove('active');
+                form.classList.remove('lead-form-hidden');
+            }
+
+            function isValidEmail(value) {
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+            }
+
+            openButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    openModal(button.getAttribute('data-cta-source'));
+                });
+            });
+
+            closeBtn.addEventListener('click', closeModal);
+
+            modal.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    closeModal();
+                }
+            });
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape' && modal.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const name = nameInput.value.trim();
+                const email = emailInput.value.trim();
+
+                if (!name) {
+                    errorEl.textContent = 'Please enter your full name.';
+                    nameInput.focus();
+                    return;
+                }
+
+                if (!isValidEmail(email)) {
+                    errorEl.textContent = 'Please enter a valid email address.';
+                    emailInput.focus();
+                    return;
+                }
+
+                errorEl.textContent = '';
+                submitButton.disabled = true;
+                submitButton.textContent = 'Submitting...';
+                closeBtn.disabled = true;
+                form.classList.add('lead-form-hidden');
+                successEl.classList.add('active');
+
+                let delivered = false;
+                if (navigator.sendBeacon) {
+                    try {
+                        delivered = navigator.sendBeacon(form.action, new FormData(form));
+                    } catch (e) {
+                        delivered = false;
+                    }
+                }
+
+                if (!delivered) {
+                    form.submit();
+                }
+
+                window.setTimeout(function () {
+                    form.reset();
+                    window.location.href = REDIRECT_URL;
+                }, 1200);
+            });
+        })();
+    </script>
+</body>
+</html>
