@@ -1,11 +1,6 @@
 [build]
   publish = "."
-  command = "echo 'No build step required'"
-
-[[redirects]]
-  from = "/*"
-  to = "/landing-page.html"
-  status = 200
+  command = ""
 
 [context.production]
   environment = { NETLIFY_SITE_ID = "digital-landlord" }

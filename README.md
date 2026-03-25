@@ -7,7 +7,7 @@ A high-conversion, single-file direct-response marketing funnel for **The Digita
 ## Project structure
 
 ```
-landing-page.html   # Live funnel — all HTML, CSS, and JS in one file (1100+ lines)
+index.html          # Live funnel — all HTML, CSS, and JS in one file (1100+ lines)
 ml-preview.html     # MailerLite embed preview for form design/testing only — do NOT use as a template
 background_img_01.png  # Hero section background image
 .github/
@@ -22,7 +22,7 @@ No build step. No dependencies. Open directly in a browser:
 
 ```bash
 # XAMPP / local server
-http://localhost/Digital_Landlord/landing-page.html
+http://localhost/Digital_Landlord/
 
 # Or just double-click the file in Explorer to open in your default browser
 # Or use VS Code → Right-click → Open with Live Server
@@ -99,7 +99,7 @@ Checkout URL       : const REDIRECT_URL = 'https://selar.com/7b745z1401'  ← si
 
 ## Testing the form flow
 
-1. Open `landing-page.html` in a browser.
+1. Open `index.html` in a browser.
 2. Click any orange CTA button to open the modal.
 3. Submit with a real email address.
 4. Open DevTools → Network tab → look for the `subscribe` request to verify the MailerLite `sendBeacon` payload includes `fields[name]`, `fields[email]`, and `fields[cta_source]`.
@@ -109,11 +109,11 @@ Checkout URL       : const REDIRECT_URL = 'https://selar.com/7b745z1401'  ← si
 
 ## Editing guidelines
 
-- All HTML, CSS, and JS live in `landing-page.html` — keep it that way unless explicitly asked to split.
+- All HTML, CSS, and JS live in `index.html` — keep it that way unless explicitly asked to split.
 - Add new interactivity inside the existing `(function(){ … })()` IIFE.
 - Do not introduce npm packages, CDN libraries, or CSS frameworks.
 - If the hero background image (`background_img_01.png`) changes, verify the overlay gradient still provides sufficient contrast for white text.
-- `ml-preview.html` is for MailerLite form visual QA only — it uses a different endpoint (`dashboard.mailerlite.com`) and posts to `_blank`. Never reference it from `landing-page.html`.
+- `ml-preview.html` is for MailerLite form visual QA only — it uses a different endpoint (`dashboard.mailerlite.com`) and posts to `_blank`. Never reference it from `index.html`.
 
 ---
 
