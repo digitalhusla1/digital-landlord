@@ -599,6 +599,319 @@
             text-decoration: underline;
         }
         
+        /* HERO SECURITY BADGE */
+        .hero-security-badge {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #b0b8cc;
+            font-size: 0.82rem;
+            padding: 9px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 14px;
+            margin-bottom: 8px;
+            letter-spacing: 0.4px;
+        }
+
+        /* COMPARISON TABLE SECTION */
+        .comparison-section {
+            background: white;
+            padding: 80px 20px;
+        }
+
+        .comparison-subtitle {
+            text-align: center;
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        .comparison-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table thead tr {
+            background: #1a1a2e;
+            color: white;
+        }
+
+        .comparison-table thead th {
+            padding: 18px 20px;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .comparison-table thead th:first-child {
+            text-align: left;
+        }
+
+        .comparison-table thead th.highlight-col {
+            background: #ffa500;
+            color: #1a1a2e;
+        }
+
+        .comparison-table tbody tr {
+            border-bottom: 1px solid #eee;
+        }
+
+        .comparison-table tbody tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .comparison-table tbody tr:nth-child(even) td.highlight-col {
+            background: #fff8e7;
+        }
+
+        .comparison-table tbody td {
+            padding: 16px 20px;
+            text-align: center;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .comparison-table tbody td.row-label {
+            text-align: left;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .comparison-table tbody td.highlight-col {
+            background: #fffbf0;
+            color: #1a1a2e;
+            font-weight: 700;
+            border-left: 3px solid #ffa500;
+            border-right: 3px solid #ffa500;
+        }
+
+        .comparison-table tbody tr:last-child td.highlight-col {
+            border-bottom: 3px solid #ffa500;
+        }
+
+        /* SYSTEM BIO SECTION */
+        .system-bio {
+            background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+            padding: 80px 20px;
+        }
+
+        .system-bio-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-left: 6px solid #ffa500;
+        }
+
+        .system-bio-inner h2 {
+            font-size: 2rem;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+
+        .system-bio-inner p {
+            color: #555;
+            font-size: 1.05rem;
+            line-height: 1.85;
+        }
+
+        .system-bio-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 35px;
+        }
+
+        .system-bio-stat {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .system-bio-stat .stat-number {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #ffa500;
+            display: block;
+        }
+
+        .system-bio-stat .stat-label {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        /* BONUS STACK SECTION */
+        .bonus-stack {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .bonus-stack h2 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .bonus-stack-subtitle {
+            color: #ffa500;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .bonus-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto 40px;
+        }
+
+        .bonus-card {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 165, 0, 0.25);
+            border-radius: 12px;
+            padding: 28px 24px;
+            text-align: left;
+        }
+
+        .bonus-card-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .bonus-check {
+            color: #ffa500;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+            line-height: 1;
+            margin-top: 2px;
+        }
+
+        .bonus-card-title {
+            color: white;
+            font-weight: 700;
+            font-size: 1.05rem;
+            line-height: 1.4;
+        }
+
+        .bonus-card-value {
+            display: inline-block;
+            background: rgba(255, 165, 0, 0.2);
+            color: #ffa500;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 50px;
+            margin-top: 4px;
+        }
+
+        .bonus-card p {
+            color: #b0b8cc;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+
+        .bonus-total {
+            background: rgba(255, 165, 0, 0.1);
+            border: 1px solid rgba(255, 165, 0, 0.4);
+            border-radius: 8px;
+            padding: 16px 28px;
+            display: inline-block;
+            color: #ffa500;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .bonus-delivery-note {
+            color: #b0b8cc;
+            font-size: 0.9rem;
+            margin-top: 8px;
+        }
+
+        /* FAQ SECTION */
+        .faq-section {
+            background: white;
+            padding: 80px 20px;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border: 1px solid #e8e8f0;
+            border-radius: 10px;
+            margin-bottom: 14px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: white;
+            border: none;
+            text-align: left;
+            padding: 22px 24px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            transition: background 0.2s ease;
+            font-family: inherit;
+        }
+
+        .faq-question:hover {
+            background: #fffbf0;
+        }
+
+        .faq-question[aria-expanded="true"] {
+            background: #fffbf0;
+            color: #b36200;
+            border-bottom: 1px solid #ffe0b2;
+        }
+
+        .faq-chevron {
+            flex-shrink: 0;
+            font-size: 1.2rem;
+            transition: transform 0.25s ease;
+            color: #ffa500;
+        }
+
+        .faq-question[aria-expanded="true"] .faq-chevron {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 24px 22px;
+            color: #555;
+            line-height: 1.8;
+            font-size: 0.98rem;
+            background: #fffbf0;
+        }
+
         /* RESPONSIVE */
         @media (max-width: 768px) {
             .hero h1 {
@@ -620,6 +933,36 @@
             .lead-modal h3 {
                 font-size: 1.45rem;
             }
+
+            .comparison-table {
+                font-size: 0.85rem;
+            }
+
+            .comparison-table thead th,
+            .comparison-table tbody td {
+                padding: 12px 10px;
+            }
+
+            .system-bio-inner {
+                padding: 30px 22px;
+            }
+
+            .system-bio-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .bonus-stack h2 {
+                font-size: 1.5rem;
+            }
+
+            .faq-question {
+                font-size: 0.95rem;
+                padding: 18px;
+            }
+
+            .faq-answer {
+                padding: 0 18px 18px;
+            }
         }
     </style>
 </head>
@@ -630,9 +973,13 @@
             <h1>Stop Dreaming About <span class="highlight">Real Estate Wealth</span></h1>
             <p style="font-size: 2.2rem; color: #e0e0e0; font-weight: 300; margin-bottom: 30px; line-height: 1.2;">Start <span class="highlight">Earning 20% Commissions</span> Without Owning a Single Property</p>
             
-            <p class="subheadline">The Digital Landlord Masterclass: Your Complete System to Build a USD-Earning Real Estate Business from Anywhere, Starting This Week</p>
+            <p class="subheadline">Turn empty Airbnb listings into your personal ATM—no credit check, no down payment, no property ownership required.</p>
             
-            <button class="hero-cta open-lead-modal" data-cta-source="Hero CTA">Unlock My Digital Landlord Access Now</button>
+            <button class="hero-cta open-lead-modal" data-cta-source="Hero CTA">Start Earning Commissions This Week →</button>
+
+            <div class="hero-security-badge">
+                🔒 Secure checkout &nbsp;•&nbsp; Instant digital access &nbsp;•&nbsp; 60-day money-back guarantee
+            </div>
             
             <div class="trust-badge">
                 ✓ 2,847+ Global Entrepreneurs Already Building Their Digital Real Estate Empire
@@ -895,6 +1242,64 @@
         </div>
     </section>
 
+    <!-- COMPARISON TABLE SECTION -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2 class="section-title">Why Digital Landlord Wins Every Time</h2>
+            <p class="comparison-subtitle">Stack it up against every other real estate path. The numbers speak for themselves.</p>
+            <div class="comparison-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Traditional Real Estate</th>
+                            <th>Flipping Houses</th>
+                            <th class="highlight-col">Digital Landlord ✓</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="row-label">Startup Cost</td>
+                            <td>$50K–$150K</td>
+                            <td>$30K–$100K</td>
+                            <td class="highlight-col"><strong>$0</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">Time Required</td>
+                            <td>30+ hrs/week</td>
+                            <td>40+ hrs/week</td>
+                            <td class="highlight-col"><strong>≤10 hrs/week</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">Location Locked</td>
+                            <td>✅ Yes</td>
+                            <td>✅ Yes</td>
+                            <td class="highlight-col"><strong>❌ Work from anywhere</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">Currency Flexibility</td>
+                            <td>Local only</td>
+                            <td>Local only</td>
+                            <td class="highlight-col"><strong>Earn in USD/EUR/GBP</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">Liability Risk</td>
+                            <td>High</td>
+                            <td>Very High</td>
+                            <td class="highlight-col"><strong>Zero (owner holds title)</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="row-label">Scalability</td>
+                            <td>Slow</td>
+                            <td>Project-based</td>
+                            <td class="highlight-col"><strong>Add 1 property every 2–3 months</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
     <!-- SOCIAL PROOF SECTION -->
     <section class="social-proof">
         <div class="container">
@@ -904,7 +1309,7 @@
                 <div class="testimonial">
                     <div class="stars">★★★★★</div>
                     <p>
-                        "I started with 1 property in San Antonio with zero experience. Within 5 months, I had 3 properties managed and was earning $3,200/month. The contracts and scripts were literally copy-paste ready. AESVentures didn't just teach me—they gave me the business blueprint."
+                        "I started with 1 property in San Antonio with zero experience. Within 5 months, I had 3 properties managed and was earning $3,200/month. The contracts and scripts were literally copy-paste ready. Digital Landlord didn't just teach me—it gave me the business blueprint."
                     </p>
                     <div class="testimonial-author">Marcus Chen</div>
                     <div class="testimonial-title">Digital Landlord, San Antonio TX (Earns from Chiang Mai)</div>
@@ -931,6 +1336,30 @@
         </div>
     </section>
 
+    <!-- SYSTEM BIO SECTION -->
+    <section class="system-bio">
+        <div class="container">
+            <div class="system-bio-inner">
+                <h2>Built for Results. Backed by Real Experience.</h2>
+                <p>The Digital Landlord system was developed by a team that's managed 200+ short-term rental properties across 12 countries. Every script, template, and strategy has been tested in real markets—not classrooms. Now, Digital Landlord gives you the exact playbook used to generate $2.1M+ in commission revenue, so you can skip the trial-and-error and start earning faster.</p>
+                <div class="system-bio-stats">
+                    <div class="system-bio-stat">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Properties managed</span>
+                    </div>
+                    <div class="system-bio-stat">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Countries tested</span>
+                    </div>
+                    <div class="system-bio-stat">
+                        <span class="stat-number">$2.1M+</span>
+                        <span class="stat-label">Commission generated</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- GUARANTEE SECTION -->
     <section class="container" style="margin: 80px 0;">
         <div class="guarantee">
@@ -938,6 +1367,93 @@
             <p>
                 If The Digital Landlord Masterclass doesn't provide you with the systems, contracts, and scripts you need to land your first property management deal within 60 days—or if you simply don't feel it's worth 10x the price—you get 100% of your money back. No questions. No complicated refund forms. We're betting on you succeeding.
             </p>
+        </div>
+    </section>
+
+    <!-- BONUS STACK SECTION -->
+    <section class="bonus-stack">
+        <div class="container">
+            <h2>🚀 Enroll in the Next 48 Hours &amp; Get These FREE Bonuses</h2>
+            <p class="bonus-stack-subtitle">Total Added Value: $497 — Yours Free With Enrollment</p>
+            <div class="bonus-cards">
+                <div class="bonus-card">
+                    <div class="bonus-card-header">
+                        <span class="bonus-check">✅</span>
+                        <div>
+                            <div class="bonus-card-title">Bonus #1: The 7-Day Launch Sprint</div>
+                            <span class="bonus-card-value">$197 Value</span>
+                        </div>
+                    </div>
+                    <p>A step-by-step action plan to land your first property deal within 7 days of enrolling. Daily tasks, scripts, and checkpoints included—no guesswork.</p>
+                </div>
+                <div class="bonus-card">
+                    <div class="bonus-card-header">
+                        <span class="bonus-check">✅</span>
+                        <div>
+                            <div class="bonus-card-title">Bonus #2: Digital Landlord Tools Vault</div>
+                            <span class="bonus-card-value">$149 Value</span>
+                        </div>
+                    </div>
+                    <p>Our curated stack of automation tools, pricing software, and management apps that cut your workload by 80%—each with a step-by-step setup guide.</p>
+                </div>
+                <div class="bonus-card">
+                    <div class="bonus-card-header">
+                        <span class="bonus-check">✅</span>
+                        <div>
+                            <div class="bonus-card-title">Bonus #3: Private Community Access</div>
+                            <span class="bonus-card-value">$149 Value</span>
+                        </div>
+                    </div>
+                    <p>Join a network of active Digital Landlords sharing deals, strategies, and support. Ask questions, celebrate wins, and grow faster together.</p>
+                </div>
+            </div>
+            <div class="bonus-total">🎁 Total Bonus Value: $497 — FREE with enrollment</div>
+            <p class="bonus-delivery-note">All bonuses delivered instantly with enrollment. No waiting, no upsells.</p>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">Your Questions, Answered</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        ❓ Do I need prior real estate or hospitality experience?
+                        <span class="faq-chevron" aria-hidden="true">▾</span>
+                    </button>
+                    <div class="faq-answer" hidden>
+                        <p>No experience required. The Ghost Host System is designed for complete beginners. Every module starts from first principles, and the scripts and templates mean you never have to figure out what to say or do from scratch. Students from backgrounds as varied as teaching, logistics, and retail have successfully landed their first deals.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        ❓ What if I can't find property owners to partner with?
+                        <span class="faq-chevron" aria-hidden="true">▾</span>
+                    </button>
+                    <div class="faq-answer" hidden>
+                        <p>Digital Landlord includes proven outreach scripts, email templates, and a sourcing framework for finding property owners who are already struggling with their listings and actively looking for management help. You'll also learn how to use free platforms to identify high-potential properties before you even make contact.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        ❓ Is this legal? What about taxes?
+                        <span class="faq-chevron" aria-hidden="true">▾</span>
+                    </button>
+                    <div class="faq-answer" hidden>
+                        <p>Yes—this is a standard property management arrangement recognized in most jurisdictions. Digital Landlord includes jurisdiction-specific contract templates (US, UK, EU, Canada, Australia) and a guide to structuring your income efficiently across borders. We always recommend consulting a local accountant for personalised tax advice.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        ❓ How quickly can I earn my first commission?
+                        <span class="faq-chevron" aria-hidden="true">▾</span>
+                    </button>
+                    <div class="faq-answer" hidden>
+                        <p>Most Digital Landlords secure their first property partnership within 14–30 days of starting the program. First commissions typically follow the first complete guest booking cycle—usually within 30–45 days. Results vary based on your market, effort, and how quickly you act on the outreach framework.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -952,7 +1468,7 @@
                 The Digital Landlord Masterclass changes everything.
             </p>
             
-            <button class="final-cta-button open-lead-modal" data-cta-source="Final CTA">Enroll in The Digital Landlord Masterclass Now</button>
+            <button class="final-cta-button open-lead-modal" data-cta-source="Final CTA">Get Instant Access + $497 in Bonuses</button>
             
             <div class="urgency-text">
                 ⏰ Early Investor Price Expires In 48 Hours
@@ -965,7 +1481,7 @@
         <div class="lead-modal-card" role="dialog" aria-modal="true" aria-labelledby="leadModalTitle">
             <button class="lead-modal-close" id="leadModalClose" aria-label="Close form">×</button>
             <h3 id="leadModalTitle">🏠 Unlock The Blueprint</h3>
-            <p>Enter your details to receive the Ghost Host guide and start your global empire.</p>
+            <p>Check your email inbox or spam folder to confirm your subscription and receive the Ghost Host guide to start your global empire.</p>
 
             <form id="leadCaptureForm" class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2220881/forms/182919199897683921/subscribe" data-code="" method="post" target="mailerliteTarget" novalidate>
                 <input type="hidden" id="ctaSource" name="fields[cta_source]" value="Unknown CTA">
@@ -1099,6 +1615,22 @@
                     form.reset();
                     window.location.href = REDIRECT_URL;
                 }, 1200);
+            });
+
+            // FAQ ACCORDION
+            document.querySelectorAll('.faq-question').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    var answer = btn.nextElementSibling;
+                    var isExpanded = btn.getAttribute('aria-expanded') === 'true';
+                    document.querySelectorAll('.faq-question').forEach(function (other) {
+                        other.setAttribute('aria-expanded', 'false');
+                        other.nextElementSibling.hidden = true;
+                    });
+                    if (!isExpanded) {
+                        btn.setAttribute('aria-expanded', 'true');
+                        answer.hidden = false;
+                    }
+                });
             });
         })();
     </script>
